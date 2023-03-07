@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gira la Carta</title>
+
+    <style>
+        img {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="tavolo"></div>
+    <script>
+        let carte = ["Be-my-friend-front.jpg","Buildawall-front.jpg","whatthehell-front.jpg"]
+        let tavolo = document.querySelector("#tavolo")
+        carte.forEach(element => {
+            tavolo.innerHTML += '<img id="' + element + '" src="Yugioh-Card-Back.jpg" onclick="gira(this)" />'
+ 
+        });
+        function gira(carta) {
+            console.log(carta.id)
+        }
+    </script>
+</body>
+
+</html>
